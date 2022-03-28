@@ -32,11 +32,7 @@ agent any
             }
         }
    
-       #stage('Terraform Apply') {
-       #    steps {
-       #         sh 'terraform apply -input=false tfplan'
-       #     }
-       # }
+ 
       stage ("terraform Action") {
             steps {
                 echo "Terraform action is --> ${action}"
