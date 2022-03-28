@@ -32,13 +32,19 @@ agent any
             }
         }
    
-       stage('Terraform Apply') {
+       #stage('Terraform Apply') {
+       #    steps {
+       #         sh 'terraform apply -input=false tfplan'
+       #     }
+       # }
+      stage ("terraform Action") {
             steps {
-                sh 'terraform apply -input=false tfplan'
-
-            }
+                echo "Terraform action is --> ${action}"
+                sh ('terraform ${action} --auto-approve') 
+           }
         }
-
+        
+        
     }
 
 }
