@@ -6,7 +6,6 @@ Creating Load balancer  --> listner --> Target Group --> attaching that target g
 Using S3 bucket for terraform backend files
 
 #Terraform Commands
-terraform validate
 
 terraform fmt  --> This command make proper indentation in your file
 
